@@ -156,7 +156,7 @@ export abstract class BaseFacet {
 
   protected getCellDraggedWidth(node: Node): number {
     const { colCfg } = this.cfg;
-    return get(colCfg?.widthByFieldValue, `${node.value}`);
+    return get(colCfg?.widthByFieldValue, `${node.field}`);
   }
 
   hideScrollBar = () => {
