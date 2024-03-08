@@ -1,3 +1,4 @@
 packages:
   - 'packages/*'
   - 's2-site'
+  - 'local-practise'
