@@ -13,7 +13,8 @@ export const getRowsForGrid = (
   viewCellHeights: ViewCellHeights,
 ) => {
   const rows = [];
-
+  if (rowMax)
+  console.log('rowMax:', rowMax, rowMin)
   for (let index = rowMin; index < rowMax + 1; index++) {
     rows.push(viewCellHeights.getCellOffsetY(index + 1));
   }

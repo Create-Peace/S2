@@ -61,7 +61,6 @@ export class TableDataSet extends BaseDataSet {
 
     return [...startFrozenRows, ...data, ...endFrozenRows];
   }
-
   handleDimensionValueFilter = () => {
     each(this.filterParams, ({ filterKey, filteredValues, customFilter }) => {
       const filteredValuesSet = new Set(filteredValues);
