@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <div ref="s2Container"></div>
+    <div ref="s2Container" style="width: 800px; margin: auto"></div>
   </div>
 </template>
 
