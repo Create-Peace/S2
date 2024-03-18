@@ -8,6 +8,7 @@
 <script>
 
 import { PivotSheet } from '../../packages/s2-core'
+import CustomColCell from './customCell/CustomColCell'
 
 const dataCfg = {
   "describe": "标准交叉表数据。",
@@ -77,7 +78,7 @@ const s2DataConfig = {
           //   return `${value / 100} %`;
           // },
         },
-      ],
+      ]
     };
 
     const s2Options = {
@@ -88,6 +89,9 @@ const s2DataConfig = {
         copy: { enable: true },
         withFormat: true,
         withHeader: true,
+      },
+      colCell: (node, spreadsheet, headerConfig) => {
+        return new CustomColCell(node, spreadsheet, headerConfig, this.customTableColumnBg)
       },
       // 显示序号
       // seriesNumber: {
