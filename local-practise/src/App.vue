@@ -9,6 +9,7 @@
 
 import { PivotSheet } from '../../packages/s2-core'
 import CustomColCell from './customCell/CustomColCell'
+import CustomDataCell from './customCell/CustomDataCell'
 
 const dataCfg = {
   "describe": "标准交叉表数据。",
@@ -317,6 +318,13 @@ const s2DataConfig = {
       },
       colCell: (node, spreadsheet, headerConfig) => {
         return new CustomColCell(node, spreadsheet, headerConfig)
+      },
+      dataCell: (viewMeta) => {
+        console.log('dataCell:::')
+        return new CustomDataCell(viewMeta, viewMeta.spreadsheet)
+      },
+      seriesNumber: {
+        enable: true
       },
       // 显示序号
       // seriesNumber: {
