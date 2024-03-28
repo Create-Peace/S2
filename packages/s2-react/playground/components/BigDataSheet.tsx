@@ -41,6 +41,11 @@ export function generateRawData(
 }
 
 const s2DataConfig = {
+ /*  interaction:{
+    scrollSpeedRatio: {
+      horizontal: 2
+    }
+  }, */
   fields: {
     rows: ['type', 'subType'],
     columns: ['province', 'city'],
